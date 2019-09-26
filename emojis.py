@@ -35,4 +35,6 @@ if __name__ == "__main__":
   print("| ----- | ----- |")
 
   for k, v in codepoints.items():
+    k = k.replace('\\', r'\\')
+    k = k.replace(r'|', r'\|')
     print("|{}|{}|".format(k, chr(int(v, 16))))
